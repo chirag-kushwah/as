@@ -4,6 +4,8 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { CiShoppingCart, CiHeart, CiUser, CiSearch } from "react-icons/ci";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { Search } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 
 const Navbar = () => {
@@ -16,6 +18,9 @@ const Navbar = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+
+const router = useRouter();
+
 
   // Letter-by-letter typing effect
   useEffect(() => {
@@ -44,7 +49,9 @@ const Navbar = () => {
         <div className="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between w-full gap-4 py-4">
           {/* Left: Logo + Location */}
           <div className="flex items-center space-x-4">
-            <div className="text-xl uppercase font-bold text-[#4A786F]">The bliss house</div>
+            <div className="text-xl uppercase font-bold text-[#4A786F] cursor-pointer" onClick={()=>{
+              router.push("/"); 
+            }}>The bliss house</div>
             <div className="flex items-center space-x-3 px-3 py-2 border border-gray-100 rounded-md cursor-pointer hover:shadow-sm transition-shadow duration-300">
               <img
                 src="./india_321238.svg"
@@ -62,17 +69,17 @@ const Navbar = () => {
 
           {/* Right: Search + Icons */}
           <div className="flex items-center gap-4 ">
-            {/* Search */}
-            <div className="flex-1 bg-white md:mx-4 rounded-full border border-gray-300">
-              <div className="flex items-center justify-between px-4">
-                <input
-                  type="text"
-                  placeholder={displayedText}
-                  className="w-full py-2 px-4  rounded-full text-black focus:outline-none focus:ring-2 focus:ring-green-500 transition"
-                />
-                <CiSearch className="text-gray-500 text-xl cursor-pointer" />
-              </div>
-            </div>
+           
+               {/* Search */}
+{/* Search */}
+<div className="flex-1 md:mx-4 relative">
+  <input
+    type="text"
+    placeholder={displayedText}
+    className="w-full pr-10 pl-4 py-2 rounded-full text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-700 transition"
+  />
+  <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
+</div>
 
 
             {/* Icons */}
@@ -112,9 +119,9 @@ const Navbar = () => {
           ))}
 
           <div className="flex gap-4">
-            <button className="px-6 pt-[5px] pb-[5px] rounded-full text-sm bg-[#ffd596] text-black cursor-pointer">
+            <Link href="/corporate" className="px-6 pt-[5px] pb-[5px] rounded-full text-sm bg-[#ffd596] text-black cursor-pointer">
               For Corporate
-            </button>
+            </Link>
             <button className="px-6 pt-[5px] pb-[8px] text-sm rounded-full bg-black text-white cursor-pointer">
               Download Catalogue
             </button>

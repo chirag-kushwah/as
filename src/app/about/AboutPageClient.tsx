@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ChevronRight, Users, Award, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 // Image paths as variables
 const About = "/aboutpage/80.jpg";
@@ -25,10 +26,10 @@ export default function AboutPageClient() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-white w-full">
+    <div className="min-h-screen bg-white ">
       {/* Hero Section */}
       <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
-        <div className="absolute inset-0 bg-teal-900 to-transparent flex items-center">
+        <div className="absolute inset-0 bg-[var(--greenBackground)] to-transparent flex items-center">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -41,7 +42,8 @@ export default function AboutPageClient() {
                 Our Story
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 ml-2 sm:ml-4">
-                Discover the passion and craftsmanship behind Your Fashion Store, where tradition meets contemporary style.
+                Discover the passion and craftsmanship behind Your Fashion
+                Store, where tradition meets contemporary style.
               </p>
             </motion.div>
           </div>
@@ -59,25 +61,31 @@ export default function AboutPageClient() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
-                <div className="inline-block px-4 py-1 rounded-full bg-teal-100 text-teal-800 font-medium text-2xl mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8  ">
+              <div className="order-2 md:order-1 ">
+                <div className="inline-block px-4 py-1 rounded-full bg-[var(--greenBackground)]  text-white font-medium text-2xl mb-4">
                   Our Journey
                 </div>
                 <h2 className="text-3xl md:text-3xl font-semibold mb-4">
                   From Small Boutique to Fashion Destination
                 </h2>
                 <p className="text-gray-700 mb-4">
-                  Founded in 2010, Your Fashion Store began as a small boutique in New Delhi with a vision to bring authentic Indian craftsmanship to the modern fashion landscape.
+                  Founded in 2010, Your Fashion Store began as a small boutique
+                  in New Delhi with a vision to bring authentic Indian
+                  craftsmanship to the modern fashion landscape.
                 </p>
                 <p className="text-gray-700">
-                  Over the years, we've expanded our collection to include a wide range of traditional and contemporary designs, always staying true to our roots while embracing innovation.
+                  Over the years, we've expanded our collection to include a
+                  wide range of traditional and contemporary designs, always
+                  staying true to our roots while embracing innovation.
                 </p>
+               
+                <Button className="bg-[var(--greenBackground)] text-white cursor-pointer hover:bg-transparent hover:border-2 border-bg-[var(--greenBackground)] hover:text-[var(--greenBackground)] mt-5 px-7">Shop Now</Button>
               </div>
-              <div className="order-1 md:order-2">
+              <div className="order-1 md:order-2 ">
                 <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl transform md:rotate-2 transition-transform hover:rotate-0 duration-300">
                   <Image
-                    src={About}
+                    src="/img14.png" // start from public folder root
                     alt="Our Store"
                     fill
                     className="object-cover"
@@ -88,16 +96,17 @@ export default function AboutPageClient() {
           </motion.section>
 
           {/* Our Values */}
+          
           <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
             transition={{ duration: 0.6 }}
-            className="mb-16"
+            className="mb-16 flex flex-col items-center  p-10"
           >
-            <div className="mb-10">
-              <div className="inline-block px-4 py-1 rounded-full bg-teal-100 text-teal-800 font-medium text-xl mb-4">
+            <div className="mb-10  ">
+              <div className="inline-block px-4 py-1 rounded-full  bg-[var(--greenBackground)]  text-white font-medium text-xl mb-4">
                 Our Values
               </div>
               <h2 className="text-4xl md:text-3xl font-semibold">
@@ -105,38 +114,54 @@ export default function AboutPageClient() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <motion.div whileHover={{ y: -10 }} className="bg-white p-8 rounded-2xl shadow-md border border-teal-100">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6  ">
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white p-8 rounded-2xl shadow-md border border-teal-100"
+              >
+                <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6">
                   <Award className="h-7 w-7 text-teal-700" />
                 </div>
                 <h3 className="text-xl font-medium mb-3">Authenticity</h3>
                 <p className="text-gray-700">
-                  We celebrate the rich heritage of Indian craftsmanship, working directly with artisans to preserve traditional techniques while creating contemporary designs.
+                  We celebrate the rich heritage of Indian craftsmanship,
+                  working directly with artisans to preserve traditional
+                  techniques while creating contemporary designs.
                 </p>
               </motion.div>
 
-              <motion.div whileHover={{ y: -10 }} className="bg-white p-8 rounded-2xl shadow-md border border-teal-100">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white p-8 rounded-2xl shadow-md border "
+              >
+                <div className="w-14 h-14 rounded-full  flex items-center justify-center mb-6">
                   <Heart className="h-7 w-7 text-teal-700" />
                 </div>
                 <h3 className="text-xl font-medium mb-3">Sustainability</h3>
                 <p className="text-gray-700">
-                  We're committed to ethical production practices, using eco-friendly materials and supporting fair wages for all artisans and workers in our supply chain.
+                  We're committed to ethical production practices, using
+                  eco-friendly materials and supporting fair wages for all
+                  artisans and workers in our supply chain.
                 </p>
               </motion.div>
 
-              <motion.div whileHover={{ y: -10 }} className="bg-white p-8 rounded-2xl shadow-md border border-teal-100">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white p-8 rounded-2xl shadow-md border "
+              >
+                <div className="w-14 h-14 rounded-full  flex items-center justify-center mb-6">
                   <Users className="h-7 w-7 text-teal-700" />
                 </div>
                 <h3 className="text-xl font-medium mb-3">Innovation</h3>
                 <p className="text-gray-700">
-                  While honoring tradition, we continuously explore new designs, techniques, and technologies to create fashion that resonates with the modern consumer.
+                  While honoring tradition, we continuously explore new designs,
+                  techniques, and technologies to create fashion that resonates
+                  with the modern consumer.
                 </p>
               </motion.div>
             </div>
           </motion.section>
+       
 
           {/* Our Team */}
           <motion.section
@@ -148,7 +173,7 @@ export default function AboutPageClient() {
             className="mb-16"
           >
             <div className="text-center mb-10">
-              <div className="inline-block px-4 py-1 rounded-full bg-teal-100 text-teal-800 font-medium text-sm mb-4">
+              <div className="inline-block px-4 py-1 rounded-full  bg-[var(--greenBackground)]  text-white font-medium text-xl mb-4">
                 Our Team
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold">
@@ -161,7 +186,7 @@ export default function AboutPageClient() {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-md"
+                  className=" rounded-2xl overflow-hidden shadow-md"
                 >
                   <div className="relative h-[470px] overflow-hidden">
                     <Image
@@ -189,16 +214,17 @@ export default function AboutPageClient() {
             transition={{ duration: 0.6 }}
             className="mt-20"
           >
-            <div className="bg-gradient-to-r from-teal-700 to-teal-500 rounded-2xl p-8 md:p-12 text-white text-center">
+            <div className=" rounded-2xl p-8 md:p-12 text-white text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Join Our Fashion Journey
               </h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto">
-                Discover our latest collections and be part of our story as we continue to celebrate the rich heritage of Indian fashion.
+                Discover our latest collections and be part of our story as we
+                continue to celebrate the rich heritage of Indian fashion.
               </p>
               <a
                 href="/products"
-                className="inline-flex items-center bg-white text-teal-700 font-medium px-6 py-3 rounded-full hover:bg-teal-50 transition-colors"
+                className="inline-flex items-center  text-teal-700 font-medium px-6 py-3 rounded-full hover:bg-teal-50 transition-colors"
               >
                 Explore Our Collections
                 <ChevronRight className="ml-2 h-5 w-5" />

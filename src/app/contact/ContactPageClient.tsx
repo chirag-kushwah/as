@@ -303,7 +303,7 @@ export default function ContactPageClient() {
     <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-white">
       {/* Hero Section */}
       <div className="relative h-[30vh] md:h-[40vh] overflow-hidden">
-        <div className="absolute inset-0 bg-teal-900 flex items-center">
+        <div className="absolute inset-0 bg-[var(--greenBackground)] flex items-center">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -458,7 +458,7 @@ export default function ContactPageClient() {
                   <Button
                     type="submit"
                     disabled={submitting}
-                    className="w-full bg-teal-700 hover:bg-teal-800 text-white py-3 rounded-lg flex items-center justify-center"
+                    className="w-full bg-[var(--greenBackground)] hover:bg-teal-800 text-white py-3 rounded-lg flex items-center justify-center"
                   >
                     {submitting ? (
                       <>
@@ -490,7 +490,7 @@ export default function ContactPageClient() {
                     <Link
                       href="https://maps.google.com"
                       target="_blank"
-                      className="bg-teal-700 hover:bg-teal-800 text-white px-4 py-2 rounded-lg shadow-lg transition-colors"
+                      className="bg-[var(--greenBackground)] hover:bg-teal-800 text-white px-4 py-2 rounded-lg shadow-lg transition-colors"
                     >
                       Open in Google Maps
                     </Link>
@@ -517,7 +517,7 @@ export default function ContactPageClient() {
               Find quick answers to common questions about our products and services
             </p>
 
-            <div className="bg-gradient-to-r from-teal-700 to-teal-500 rounded-2xl p-8 text-white text-center">
+            <div className="bg-[var(--greenBackground)] rounded-2xl p-8 text-white text-center">
               <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
               <p className="mb-6">Check our comprehensive FAQ section or reach out to our customer support team</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
