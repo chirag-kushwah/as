@@ -101,27 +101,27 @@ export default async function BlogPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-amber-50 to-amber-100 py-16 md:py-24">
+      {/* <div className="bg-gradient-to-r from-amber-50 to-amber-100 py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-light mb-4 text-amber-900">Our Blog</h1>
           <p className="text-amber-800 max-w-2xl mx-auto text-lg">
             Stay updated with the latest trends, styling tips, and fashion insights in the world of Indian ethnic wear.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 py-12">
         {/* Breadcrumb */}
-        <div className="flex items-center text-sm mb-12">
+        {/* <div className="flex items-center text-sm mb-12">
           <Link href="/" className="text-gray-500 hover:text-amber-700">
             Home
           </Link>
           <ChevronRight className="h-4 w-4 mx-2 text-gray-400" />
           <span className="text-gray-900">Blog</span>
-        </div>
+        </div> */}
 
         {/* Debug Info (remove in production) */}
-        {process.env.NODE_ENV === "development" && (
+        {/* {process.env.NODE_ENV === "development" && (
           <div className="mb-4 p-4 bg-gray-100 rounded text-sm">
             <p>Debug Info:</p>
             <p>Blogs found: {blogs?.length || 0}</p>
@@ -139,11 +139,11 @@ export default async function BlogPage() {
             )}
             {error && <p className="text-red-600">Error: {error}</p>}
           </div>
-        )}
+        )} */}
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sidebar Filters */}
-          <div className="order-2 lg:order-1 lg:col-span-1">
+          {/* <div className="order-2 lg:order-1 lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm p-6 sticky top-20 border border-amber-100">
               <h2 className="text-xl font-medium mb-4 text-amber-900 border-b border-amber-100 pb-2">Categories</h2>
               <ul className="space-y-2 mb-8">
@@ -190,7 +190,7 @@ export default async function BlogPage() {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Blog Grid */}
           <div className="order-1 lg:order-2 lg:col-span-3">
