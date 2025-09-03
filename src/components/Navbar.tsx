@@ -1,11 +1,11 @@
 // components/Navbar.tsx
 "use client";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { CiShoppingCart, CiHeart, CiUser, CiSearch } from "react-icons/ci";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link"
 
 
 const Navbar = () => {
@@ -84,16 +84,24 @@ const router = useRouter();
 
             {/* Icons */}
             <div className="flex items-center gap-3">
-              <div className="p-2 border border-[#464646] rounded-full cursor-pointer">
-                <CiShoppingCart size={20} color="#464646" />
-              </div>
-              <div className="p-2 border border-[#464646] rounded-full cursor-pointer">
-                <CiHeart size={20} color="#464646" />
-              </div>
-              <div className="p-2 border border-[#464646] rounded-full cursor-pointer">
-                <CiUser size={20} color="#464646" />
-              </div>
-            </div>
+      <Link href="/cart">
+        <div className="p-2 border border-[#464646] rounded-full cursor-pointer hover:bg-gray-100">
+          <CiShoppingCart size={20} color="#464646" />
+        </div>
+      </Link>
+
+      <Link href="/wishlist">
+        <div className="p-2 border border-[#464646] rounded-full cursor-pointer hover:bg-gray-100">
+          <CiHeart size={20} color="#464646" />
+        </div>
+      </Link>
+
+      <Link href="/userlogin">
+        <div className="p-2 border border-[#464646] rounded-full cursor-pointer hover:bg-gray-100">
+          <CiUser size={20} color="#464646" />
+        </div>
+      </Link>
+    </div>
           </div>
         </div>
       </div>
