@@ -59,7 +59,7 @@ const Expertise = () => {
     <div className="py-12 bg-[#F7F8F1]">
       <div className=" container  max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-8 bg-[#F7F8F1]">
         {/* Left Content */}
-        <div className="lg:w-1/3 text-center lg:text-left">
+        <div className="lg:w-1/3 text-center lg:text-left ">
           <h2 className="text-4xl font-bold text-[#0A75B4] mb-4">
             Our Expertise
           </h2>
@@ -69,6 +69,18 @@ const Expertise = () => {
           <button className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold shadow cursor-pointer hover:bg-yellow-500 transition">
             Request A Call Back
           </button>
+          {/* Prev Button and next button*/}
+          <div className="flex gap-3 pt-3 mt-4 ml-2">
+            {/* Prev Button */}
+            <button className="custom-prev -translate-y-1/2 border border-black w-10 h-10 rounded-full flex items-center justify-center  hover:bg-gray-100 z-10 cursor-pointer">
+              <FaChevronLeft className="text-gray-500 text-sm" />
+            </button>
+
+            {/* Next Button */}
+            <button className="custom-next -translate-y-1/2 border border-black  w-10 h-10 rounded-full flex items-center justify-center  hover:bg-gray-100 z-10 cursor-pointer">
+              <FaChevronRight className="text-gray-500 text-sm" />
+            </button>
+          </div>
         </div>
 
         {/* Right Swiper */}
@@ -83,7 +95,7 @@ const Expertise = () => {
             modules={[Navigation]}
             breakpoints={{
               640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3.5 },
+              1024: { slidesPerView: 3.1 },
             }}
             className="w-full"
           >
@@ -103,16 +115,6 @@ const Expertise = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Prev Button */}
-          <button className="custom-prev absolute top-1/2 -left-0.5 -translate-y-1/2 bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 z-10">
-            <FaChevronLeft className="text-gray-500 text-sm" />
-          </button>
-
-          {/* Next Button */}
-          <button className="custom-next absolute top-1/2 -right-0.5 -translate-y-1/2 bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 z-10">
-            <FaChevronRight className="text-gray-500 text-sm" />
-          </button>
         </div>
       </div>
     </div>

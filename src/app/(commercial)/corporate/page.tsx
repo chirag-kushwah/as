@@ -2,7 +2,7 @@ import BrandedGiftVouchers from '@/components/BrandedGiftVouchers'
 import BuildYourOwnBox from '@/components/BuildYourOwnBox'
 import CorporateGiftingSolutions from '@/components/CorporateGiftingSolutions'
 import Expertise from '@/components/Expertise'
-import Footer from '@/components/Footer'
+// import Footer from '@/components/Footer'
 
 import GiftCategoriesPrices from '@/components/GiftCategoriesPrices'
 import GiftingStats from '@/components/GiftingStats'

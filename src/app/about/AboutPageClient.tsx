@@ -26,10 +26,11 @@ export default function AboutPageClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white ">
+    <div className=" ">
       {/* Hero Section */}
-      <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
-        <div className="absolute inset-0 bg-[var(--greenBackground)] to-transparent flex items-center">
+      <div className=" container m-auto py-0.5 h-[40vh] md:h-[50vh] overflow-hidden">
+        <div>
+        <div className=" container m-auto py-25 bg-[var(--greenBackground)]  flex items-center">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -47,6 +48,7 @@ export default function AboutPageClient() {
               </p>
             </motion.div>
           </div>
+        </div>
         </div>
       </div>
 
@@ -214,7 +216,7 @@ export default function AboutPageClient() {
             transition={{ duration: 0.6 }}
             className="mt-20"
           >
-            <div className=" rounded-2xl p-8 md:p-12 text-white text-center">
+            <div className=" rounded-2xl p-8 md:p-12 text-black text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Join Our Fashion Journey
               </h2>

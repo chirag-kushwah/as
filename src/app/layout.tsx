@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Navtop from "@/components/Navtop";
 import Footer from "@/components/ui/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // jitne chahiye utne add karo
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -26,14 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gradient-to-b from-[#f2e1cb]/40 to-white antialiased`}
-      >
-        <Navtop/>
-        <Navbar/>
+    <html lang="en" className={poppins.variable}>
+      <body className="font-sans min-h-screen">
+        <Navtop />
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

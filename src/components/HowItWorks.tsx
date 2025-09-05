@@ -110,7 +110,7 @@ const HowItWorks = () => {
     <div>
 
    
-    <div className=" container m-auto py-6 pb-9 text-center ">
+    <div className=" container m-auto py-9 pb-9 text-center ">
       <h2 className="text-4xl font-bold text-[var(--greenBackground)] mb-2">
         How does it work?
       </h2>

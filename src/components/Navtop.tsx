@@ -4,7 +4,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 function Navtop() {
   return (
-    <div className="bg-[#4A786F] py-3">
+    <div className="bg-[var(--greenBackground)] py-3">
       <div className="flex container mx-auto justify-between items-center">
         <div className="contact__support flex gap-5">
             <div className="text-white font-medium hover:underline">
