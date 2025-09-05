@@ -120,4 +120,6 @@ OrderSchema.index({ createdAt: -1 })
 
 const Order = mongoose.models.Order || mongoose.model<OrderDocument>("Order", OrderSchema)
 
-export { Order, type OrderDocument }
+export default Order   // ✅ default export
+export type { OrderDocument }
+
